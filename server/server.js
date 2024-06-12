@@ -27,14 +27,13 @@ async function startApolloServer() {
   app.use("/graphql", expressMiddleware(server, {context: authMiddleware}));
 
   if (process.env.NODE_ENV === 'production') {
-    console.log("PRODUCTION")
-
+/*     console.log("PRODUCTION")
+ */
     app.use(express.static(path.join(__dirname, '../client/dist')));
   
   app.get('*', (req, res) => {
-    console.log("HOMEPAGE: ", __dirname) 
-    console.log(fs.readdirSync(__dirname + "/../client"))
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+/*     console.log("HOMEPAGE: ", __dirname) */   
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 }
 
