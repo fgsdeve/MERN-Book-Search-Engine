@@ -31,7 +31,7 @@ async function startApolloServer() {
     app.use(express.static(path.join(__dirname, '../client/dist')));
   
   app.get('*', (req, res) => {
-    console.log("HOMEPAGE")
+    console.log("HOMEPAGE: ", __dirname)
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 }
