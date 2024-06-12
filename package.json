@@ -19,6 +19,8 @@
   "dependencies": {
     "@apollo/client": "^3.10.4",
     "apollo-server-express": "^3.13.0",
-    "graphql": "^16.8.1"
+    "graphql": "^16.8.1",
+    "vite": "^5.1.6",
+    "@vitejs/plugin-react": "^4.2.1"
   }
 }
