@@ -32,7 +32,7 @@ async function startApolloServer() {
   
   app.get('*', (req, res) => {
     console.log("HOMEPAGE: ", __dirname)
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 });
 }
 
