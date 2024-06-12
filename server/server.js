@@ -33,7 +33,7 @@ async function startApolloServer() {
   
   app.get('*', (req, res) => {
     console.log("HOMEPAGE: ", __dirname) 
-    console.log(fs.readdirSync(__dirname + "/.."))
+    console.log(fs.readdirSync(__dirname + "/../client/dist"))
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 }
