@@ -29,12 +29,12 @@ async function startApolloServer() {
     console.log("PRODUCTION")
 
     app.use(express.static(path.join(__dirname, '../client/dist')));
-  }
-
+  
   app.get('*', (req, res) => {
     console.log("HOMEPAGE")
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-  });
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
+}
 
   db.once('open', () => {
     app.listen(PORT, () => {
