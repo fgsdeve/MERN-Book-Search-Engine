@@ -14,13 +14,5 @@ export default defineConfig({
         changeOrigin: true
       }
     }
-  },
-  optimizeDeps: {
-    include: ['@apollo/client', 'graphql'],
-  },
-  build: {
-    rollupOptions: {
-      external: ['@apollo/client'],
-    },
-  },
+  }
 })
