@@ -5,6 +5,7 @@ const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 const { authMiddleware } = require('./utils/auth');
 const { expressMiddleware } = require("@apollo/server/express4");
+const fs = require ('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,8 +32,9 @@ async function startApolloServer() {
     app.use(express.static(path.join(__dirname, '../client/dist')));
   
   app.get('*', (req, res) => {
-    console.log("HOMEPAGE: ", __dirname)
-  res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
+    console.log("HOMEPAGE: ", __dirname) 
+    console.log(fs.readdirSync(__dirname + "/.."))
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
 }
 
