@@ -9,7 +9,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/graphql': {
-        target: 'http://localhost:3001',
+        target: 'http://https://mern-book-search-engine-2-1cso.onrender.com',
         secure: false,
         changeOrigin: true
       }
