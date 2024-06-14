@@ -73,5 +73,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact Information
 For questions or feedback, please contact Francisco:
 - GitHub: [fgsdeve](https://github.com/fgsdeve)
-- Email: [fgsdeve@-email@gmail.com]
+- Email: [fgsdeve@gmail@gmail.com]
 
